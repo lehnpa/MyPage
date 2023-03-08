@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compativle" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-sclae=1.0">
+        <title>Title Bar Text</title>
+    </head>
+
+    
+    <!-- ############# style ############# -->
+    <style>
+        /* style of class first letter */
+        .fl {
+            color : red;
+            font-size : 2cm;
+        }
+        .BlueBorder{
+            border-color:blue;
+            border-style: solid
+        }
+
+        .box{
+            border: 1px solid black;
+            display: flex;
+            flex-direction: cloumn;
+            margin: 0px auto;
+        }
+        .innerbox{
+            display: flex;   
+            width:33.33%;   
+            margin: 2px;
+            padding: 2px; 
+        }
+        .l{
+            border: 1px solid red;
+
+        }
+        .c{
+            border: 1px solid green;
+        }
+        .r{
+            border: 1px solid blue;
+        }
+        img{
+            width:100%
+        }
+
+        .zone{
+            position:relative;
+            width:100%;
+            height:200px;
+            background-color: aqua;
+            margin: 5px
+        }
+        .rect1{
+            position:absolute;
+            top:20%;
+            right:40%;
+            width:30%;
+            height: 50%;
+            background-color: blue;
+        }
+        .rect2{
+            position:absolute;
+            top:40%;
+            right:20%;
+            width:30%;
+            height: 50%;
+            background-color: red;
+        }
+    </style>
+
+    <!-- ############# script ############# -->
+    <script>
+        // this is printing a text on the debugger console
+        console.log("Hello World");
+        // this interrupts the page and shows an alert message
+        window.alert("Hello World");
+        // this adds a command to an event
+        // it writes a text at the end of the body when page is fully loaded
+        document.addEventListener('DOMContentLoaded', e => {
+            let el = document.querySelector(".fl");
+            el.style.color ="#"+Math.floor(Math.random()*16777215).toString(16);
+        })
+    </script>
+
+    <!-- ############# HTML body ############# -->
+    <body> 
+        <!-- This is a title -->
+        <h1 ><span class="fl">R</span>andom HTML Page</h1>
+
+        <!-- This is a paragraph -->
+        <p>The first paragraph is the most <em>important</em>. </p>
+
+        <!-- This is an image -->
+        <!--<img src="https://placeimg.com/640/480/any" alt="Happy" /> -->
+
+        <!-- This is a hyper link -->
+        <a href="https://www.google.com">link</a>
+
+
+        <!-- This is a shopping list -->
+        <h2 class="BlueBorder">Shopping List</h2>
+        <ul>
+            <li>Milk</li>
+            <li>Bread</li>
+            <li>Butter</li>
+        </ul>
+
+        <!-- This is a table -->
+        <h2>Some Table</h2>
+        <table>
+            <tr>
+                <th></th>
+                <th>col1</th>
+                <th>col2</th>
+                <th>col3</th>
+            </tr>
+            <tr>
+                <th>row1</th>
+                <td>d11</td>
+                <td>d12</td>
+                <td>d13</td>
+            </tr>
+            <tr>
+                <th>row2</th>
+                <td>d21</td>
+                <td>d22</td>
+                <td>d23</td>
+            </tr>
+            
+        </table>
+
+        <!-- These are nested divs-->
+        <h2>Ordered Divs</h2>
+        <div class="box">
+            <div class="innerbox l">
+                <img src="https://placeimg.com/640/480/any" alt="Happy" />
+            </div>
+            <div class="innerbox c">
+                <img src="https://placeimg.com/640/480/any" alt="Happy" />
+            </div>
+            <div class="innerbox r">
+                <img src="https://placeimg.com/640/480/any" alt="Happy" />
+            </div>
+        </div>
+
+        <!-- These are positioned divs -->
+        <h2>Drawing with Divs</h2>
+        <div class="zone">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+        </div>
+    </body>
+        
+</html>
